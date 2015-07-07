@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Todo;
 
 use App\Http\Controllers\Controller;
 use App\Models\Tasks;
+use Illuminate\Http\Request;
 
 class TodoController extends Controller
 {
@@ -33,5 +34,17 @@ class TodoController extends Controller
                 'id' => $id
             )
         );
+    }
+
+    public function saveAction()
+    {
+        // @TODO need to disable CSRF protection for API requests
+
+
+        $request = Request::capture();
+
+        echo '<pre>';
+        var_dump($request);
+        die;
     }
 }

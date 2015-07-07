@@ -13,3 +13,4 @@
 
 Route::get('/', 'Todo\TodoController@showAllAction');
 Route::get('/{id}', 'Todo\TodoController@showOneAction');
+Route::post('/save', 'Todo\TodoController@saveAction');

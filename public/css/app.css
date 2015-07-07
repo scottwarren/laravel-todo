@@ -1,15 +1,6 @@
 body {
-  margin: 0;
-  padding: 0; }
-
-.container {
   margin: 0 auto;
-  width: 300px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  padding: 0;
+  width: 960px; }
 
 /*# sourceMappingURL=app.css.map */
