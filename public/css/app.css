@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  margin: 0 auto;
+  width: 300px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+/*# sourceMappingURL=app.css.map */
