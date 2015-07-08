@@ -11,6 +11,12 @@
 |
 */
 
+// App routes
 Route::get('/', 'Todo\TodoController@showAllAction');
 Route::get('/{id}', 'Todo\TodoController@showOneAction');
-Route::post('/save', 'Todo\TodoController@saveAction');
+
+
+// API routes
+Route::get('/api/tasks/', 'Todo\TodoController@saveAction');
+Route::get('/api/tasks/{id}', 'Todo\TodoController@saveAction');
+Route::put('/api/save', 'Todo\TodoController@saveAction');
