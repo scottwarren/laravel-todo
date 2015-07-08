@@ -12,11 +12,20 @@
 */
 
 // App routes
-Route::get('/', 'Todo\TodoController@showAllAction');
-Route::get('/{id}', 'Todo\TodoController@showOneAction');
+
+// Home page
+Route::get('/', 'Todo\PageController@homePageAction');
+
+// routes for a front end app using our API
+Route::get('/dynamicTodo', 'Todo\TodoController@dynamicAction');
+Route::get('/dynamicTodo/{id}', 'Todo\TodoController@dynamicShowOneAction');
+
+// routes for a 'static' page (eg not using API or Javascript to load routes)
+Route::get('/nonDynamicTodo', 'Todo\TodoController@showAllAction');
+Route::get('/nonDynamicTodo/{id}', 'Todo\TodoController@showOneAction');
 
 
 // API routes
-Route::get('/api/tasks/', 'Todo\TodoController@saveAction');
-Route::get('/api/tasks/{id}', 'Todo\TodoController@saveAction');
-Route::put('/api/save', 'Todo\TodoController@saveAction');
+Route::get('/api/tasks/', 'Todo\ApiController@showAllAction');
+Route::get('/api/tasks/{id}', 'Todo\ApiController@showOneAction');
+Route::post('/api/save', 'Todo\ApiController@saveAction');

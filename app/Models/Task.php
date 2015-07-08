@@ -42,4 +42,13 @@ class Task {
     {
         return $this->isCompleted;
     }
+
+    public function toArray()
+    {
+        return [
+            'id' => $this->getId(),
+            'name' => $this->getName(),
+            'isCompleted' => $this->getIsCompleted(),
+        ];
+    }
 }

@@ -53,4 +53,15 @@ class Tasks {
     public function findAll() {
         return $this->getTasks();
     }
+
+    public function toArray()
+    {
+        $tasks = [];
+
+        foreach($this->getTasks() as $task) {
+            $tasks[] = $task->toArray();
+        }
+
+        return $tasks;
+    }
 }

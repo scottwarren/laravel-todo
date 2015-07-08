@@ -38,13 +38,20 @@ class TodoController extends Controller
 
     public function saveAction()
     {
-        // @TODO need to disable CSRF protection for API requests
-
-
         $request = Request::capture();
 
         echo '<pre>';
         var_dump($request);
         die;
+    }
+
+    public function dynamicAction()
+    {
+        // load todo frontend app
+    }
+
+    public function dynamicShowOneAction()
+    {
+        // load todo frontend app
     }
 }

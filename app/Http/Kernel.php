@@ -17,7 +17,10 @@ class Kernel extends HttpKernel
         \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
         \Illuminate\Session\Middleware\StartSession::class,
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-        \App\Http\Middleware\VerifyCsrfToken::class,
+        // disabling the CSRF token check for now to avoid having token mismatch errors on API calls
+        // an alternative to this is to modify the handle method to check an array of 'non-csrf' routes
+        // and skip the check if the current request's route is in that array
+        // \App\Http\Middleware\VerifyCsrfToken::class,
     ];
 
     /**
