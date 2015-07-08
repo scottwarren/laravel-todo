@@ -1,5 +1,8 @@
 Todo in Laravel
 ===
+I am building this as a learning exercise for Laravel 5. I have chosen thus far to
+not use a database for simplicity, although I might move to using a SQLite database
+in the future to learn Laravel's database features
 
 Getting Started
 ===
